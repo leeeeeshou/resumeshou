@@ -2,6 +2,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 a{
   text-decoration: none;
   color: #000;
@@ -13,18 +14,26 @@ a{
     justify-content: center;
     align-items: center;
 }
-.banner{
+.bannerarea{
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
   top: 0;
-  background-color:rgba(255,255,255,0.3);
+  z-index: 10;
+  left: 50%;
+  width: 60%;
+  height: 60px;
+  transform: translateX(-50%);
+}
+.banner{
+  margin-top: -10%;
+  background-color:rgba(255,255,255,0.5);
   backdrop-filter: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
-  z-index: 10;
   border-radius: 0px 0px 10px 10px;
+  transition: 0.5s;
+}
+.bannerarea:hover .banner{
+  margin-top: 0;
 }
 .banner ul{
     display: flex;
@@ -413,6 +422,7 @@ opacity: 0.6;
 }
 .expplace{
 width: 100%;
+min-width: 400px;
 height: 80vh;
 background-color: gainsboro;
 position: relative;
@@ -435,11 +445,7 @@ align-items: center;
 padding-left: 0%;
 padding-right: 0%;
 }
-.expbox{
-width: 15px;
-height: 15px;
-background-color: black;
-}
+
 
 
 /*第一畫面文字*/
@@ -449,7 +455,7 @@ background-color: black;
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
-    font-size: 3rem;
+    font-size: 5rem;
     opacity: 0.5;
     user-select: none;
   }
@@ -489,6 +495,7 @@ background-color: black;
   }
   .exparea h3{
     font-size: 2rem;
+    
   }
   .row{
     width: 100%;
@@ -605,6 +612,7 @@ background-color: black;
   .explt{
     transition:0.5s;
     position: relative;
+    
   }
   .secondexpyear{
     display: flex;
@@ -629,18 +637,24 @@ background-color: black;
     width: 80%;
     height: 20%;
     max-width:900px;
+    
   }
   
   .detailtext{
     text-align: center;
-   
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
 .rwdexpdetial{
   width: 80%;
+  min-width: 300px;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   text-align: center;
   display: none;
+  
 }
 .hamarea{
   position: fixed;
@@ -710,7 +724,10 @@ background-color: black;
   overflow: hidden;
  position: relative;
  box-shadow: 0px -5px 6px grey;
- 
+ font-family: "Lora", serif;
+ font-optical-sizing: auto;
+ font-weight: 700;
+ font-style: normal;
 }
 .mail{
   width: 6%;
@@ -745,8 +762,7 @@ background-color: black;
 }
 .footeritem{
   margin-left: 60%;
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1rem;
   opacity: 0;
 }
   @media (max-width: 992px){
@@ -787,5 +803,14 @@ display:block;
 .mail{
   width: 80%;
 }
-
+.expplace{
+  height: max-content;
+  padding-bottom: 20%;
+}
+.rightsite{
+  width: 80%;
+}
+.footeritem h4{
+  font-size: 1rem;
+}
 }
