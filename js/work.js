@@ -167,7 +167,7 @@ $('.next').click(function(){
   $('.leftcover').css('top','-100%');
 $('.detailtext').text(' ');
 $('.expdetial').css('width','0').css('heigth','60%');
-$('.rwdexpdetial').css('left','5%').css('bottom','30%').css('width','40%');
+$('.rwdexpdetial').css('left','5%').css('bottom','5%').css('width','90%');
 
   
   
@@ -181,8 +181,9 @@ $('.expbody').css('backgroundColor','#ECEADA');
  $('.rightcover').css('backgroundColor','#ECEADA'); 
 $('.leftcover').css('backgroundColor','#ECEADA');               
 $('.expdetial').css('width','35%').css('height','60%').css('left','15%').css('bottom','10%');
-$('.detailtext').text('I worked as a front desk receptionist at the Anping Hotel de leau   in Tainan.The job responsibilities were similar to those as landis Resort , but at the Hotel de leau, there was a greater emphasis on individual problem-solving abilities.During my tenure at the Hotel de leau, I developed strong independent working skills and successfully completed various projects assigned in the workplace.');;
-                      
+$('.expdetial .detailtext').text('I worked as a front desk receptionist at the Anping Hotel de leau   in Tainan.The job responsibilities were similar to those as landis Resort , but at the Hotel de leau, there was a greater emphasis on individual problem-solving abilities.During my tenure at the Hotel de leau, I developed strong independent working skills and successfully completed various projects assigned in the workplace.').css('fontSize','1.2rem').css('lineHeight','1.2');
+$('.rwdexpdetial .detailtext').text('I worked as a front desk receptionist at the Anping Hotel de leau   in Tainan.The job responsibilities were similar to those as landis Resort , but at the Hotel de leau, there was a greater emphasis on individual problem-solving abilities.During my tenure at the Hotel de leau, I developed strong independent working skills and successfully completed various projects assigned in the workplace.');
+
                      },600)
   
 
@@ -206,7 +207,7 @@ $('.expbody').css('backgroundColor','gainsboro');
  $('.expplace').css('backgroundColor','gainsboro')
 $('.leftcover').css('backgroundColor','gainsboro');  
 $('.expdetial').css('width','80%').css('height','20%').css('left','').css('bottom','-15px');
-$('.detailtext').text('I have worked as a front desk receptionist at the landis Resort Hotel on Yangmingshan.My responsibilities included handling check-in and check-out procedures, managing account entries, reconciliation, and settlements using the Jin Xu system.Additionally, I welcomed guests, assisted with inquiries, provided customer support, and resolved issues.I also performed room service, operated the telephone switchboard, directed calls, introduced hotel facilities, and carried out other tasks assigned by my supervisors.');
+$('.detailtext').text('I have worked as a front desk receptionist at the landis Resort Hotel on Yangmingshan.My responsibilities included handling check-in and check-out procedures, managing account entries, reconciliation, and settlements using the Jin Xu system.Additionally, I welcomed guests, assisted with inquiries, provided customer support, and resolved issues.I also performed room service, operated the telephone switchboard, directed calls, introduced hotel facilities, and carried out other tasks assigned by my supervisors.').css('fontSize','1rem').css('lineHeight','1');
                      },600)
   
 
@@ -249,6 +250,8 @@ $(document).ready(function() {
   
    observer.observe($target);
   });
+  
+
 
   /*footer */
   if($(window).width()>992){
