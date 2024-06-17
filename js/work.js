@@ -111,10 +111,10 @@ $('#img1').click(function(){
   changbg('css/Beauty001.png')
 })
 $('#img2').click(function(){
-  changbg('css/Beauty002.png')
+  changbg('css/Beauty002.gif')
 })
 $('#img3').click(function(){
-  changbg('css/Beauty003.png')
+  changbg('css/Beauty003.gif')
 })
 $('#img4').click(function(){
   changbg('css/Beauty004.png')
