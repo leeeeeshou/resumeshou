@@ -79,9 +79,19 @@ margin-top: 25px;
 }
 .cartbtn{
     position: fixed;
-    right: -5px;
+    right: -145px;
     top: 40%;
+    background-color: #DAC9A6;
+    border: 3px solid #000;
+    transition: 0.5s;
+    overflow: hidden;
 }
+.cartbtn:hover{
+    border: 3px solid #000;
+    background-color: #DAC9A6;
+    right: -5px;
+}
+
 .cartbanner{
     background-image: url(https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/0705_1.png?alt=media&token=6f6b384b-b7fe-46ed-a3e2-893431c56b10);
     height: 150px;
@@ -118,4 +128,33 @@ margin-top: 25px;
 .pagination a{
     text-decoration: none;
     color: black;
+}
+spline-viewer{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    transition: 0.5s;
+    opacity: 0;
+}
+.cartbtn:hover spline-viewer{
+    opacity: 1;
+}
+.carttitleword{
+    position: absolute;
+    height: 80%;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    top: 20px;
+    font-size: 2.5rem;
+    left: -20px;
+    opacity: 1;
+}
+.cartbtn:hover .carttitleword{
+    opacity: 0;
+}
+.cartnumber{
+    writing-mode:horizontal-tb;
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-top: 10px;
 }

@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", function() {
 '<div class="row"><div class="col-md-1 carttitle">'+number+' </div><div class="col-md-3 cartpic"><img src="'+pic+'" alt=""></div><div class="col-md-4 carttitle">'+title+'</div><div class="col-md-4 carttitle">'+cartprice+'</div></div><hr>'
             );
             i=i+1
-            $('.cartbtn').text("cart"+i)
+            $('.cartnumber').text(i)
         },
         cleancart(){
           $('.cleancartbtn').click(function(){
             $('.cartcontent').html('');
             i=0
-            $('.cartbtn').text("cart")
+            $('.cartnumber').text("")
           })
            
         },
