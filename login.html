@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resrt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<!--google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<!--google font-->
+</head>
+<style>
+    .playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+.rotate-180 {
+            transform: rotateY(180deg);
+            transition: 3s;
+        }
+    body{
+        width: 100%;
+        height: 100vh; 
+        overflow: hidden;      
+    }
+    .canvas{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+   background: linear-gradient(#ffffff, #ffffff),
+    repeating-radial-gradient(#000 0 0.0001%, #000a 0 0.0002%) 50% 0 / 2500px 2500px,
+    repeating-conic-gradient(#000 0 0.0001%, #000a 0 0.0002%) 60% 60% / 2500px 2500px;
+  background-blend-mode: normal, difference;
+  opacity:0.6
+}
+#up{
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background:linear-gradient(80deg, rgb(5,124,172), rgba(43,247,202,0.5));
+  filter:blur(80px);
+  animation:down 40s infinite reverse;
+}
+#down{
+  position: absolute;
+  right: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background:linear-gradient(80deg, rgba(245,207,82,0.8), rgba(199,10,114,0.9));
+  filter:blur(80px);
+   animation:up 40s infinite reverse;
+}
+
+#left{
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background:linear-gradient(80deg, rgb(5,124,172), rgba(183,253,52,0.8));
+  filter:blur(80px);
+   animation:left 40s infinite reverse;
+}
+
+
+#right{
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background:linear-gradient(80deg, rgba(26,248,18,0.6), rgba(199,10,52,0.8));
+  filter:blur(80px);
+  animation:right 40s infinite reverse;
+}
+
+
+@keyframes down{
+  0%,100%{
+    top: -100px;
+  }
+  70%{
+    top: 700px;
+  }
+}
+@keyframes up{
+  0%,100%{
+    bottom: -100px;
+  }
+  70%{
+    bottom: 700px;
+  }
+}
+@keyframes left{
+  0%,100%{
+    left: -100px;
+  }
+  70%{
+    left: 700px;
+  }
+}
+@keyframes right{
+  0%,100%{
+    right: -100px;
+  }
+  70%{
+    right: 700px;
+  }
+}
+    #app{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginmain{
+        width: 80%;
+        padding: 60px 30px;
+        min-height: fit-content;
+        border-radius: 20px;
+        transition: 0.5s;
+        backdrop-filter: blur(30px);
+    }
+
+    .title{
+        font-size: 6rem;
+        text-align: center;
+    }
+    .data{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .username{
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        width: 60%;
+        height: 45px;
+        border-radius: 5px;
+        border: 1px solid whitesmoke;
+    }
+    .password{
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .action{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .action button{
+        margin: 20px;
+        padding: 10px 45px;
+        border-radius: 5px;
+    }
+    i{
+        font-size: 2rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 15px;
+    }
+    .main{
+        width: 80%;
+        max-width: 1000px;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(Default_Digital_landscape_painting_featuring_a_majestic_snowca_3.jpg);
+        background-color: #FDF3EB;
+        transition: 0.5s;
+        background-size: 150%;
+        background-position: 0 20%;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        border-radius: 20px;
+        box-shadow: 8px 8px 16px black;
+    }
+
+    .fa-lock{
+        display: none;
+    }
+
+    /*id 區*/
+    .idcard{
+        display: none;
+        position: relative;
+        width: 90%;
+        height: 90%;
+        overflow: scroll;
+        border: 5px solid #B8A898;
+        transform: rotateY(180deg);
+    }
+    
+    .idcard::-webkit-scrollbar {
+  display: none;
+}
+
+    .idbanner{
+    width: 100%;
+    height: 30%;
+    background-color: #B8A898;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    }
+    .idbanner img{
+        height: 80%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+.bannercontent{
+        position: relative;
+        margin-left: 0%;
+        color: white;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+}
+.bannercontent h2{
+    font-size: 2.5rem;
+}
+.bannercontent h3{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 65%;
+}
+.idtitle{
+    font-size: 3.5rem;
+    margin: 5%;
+    width: 60%;
+}
+    .idcontent{
+       width: 100%;
+       height: 70%;
+       position: relative;
+    }
+    .idpersonal{
+        width: 75%;
+        height: 75%;
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        display: flex;
+    }
+    .idpersonal ul{
+        padding: 10px;
+    }
+    .idpersonal ul li{
+        font-size: 1.4rem;
+        margin-top: 25px;
+    }
+.idtype{
+    width: 30%;
+    height: 100%;
+}
+.iddetail{
+    width: 70%;
+    height: 100%;
+}
+.idpicturearea{
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    border: 3px solid #797169;
+    right: 5%;
+    top: 40%;
+    transform: translate(0%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.idphoto{
+    width: 90%;
+    height: 90%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.idback{
+    width: 40%;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    padding: 3px;
+    background-color: #B8A898;
+    border: 3px solid #797169;
+    color: white;
+}
+
+.mediaidback{
+width: 40%;
+padding: 20px;
+margin-left: 50%;
+transform: translateX(-50%);
+font-size: 1.3rem;
+display: none;
+margin-bottom: 15px;
+}
+
+@media(max-width:900px){
+    .idpicturearea{
+            position: relative;
+            width: 100%;
+            transform: translate(0%,0%);
+            right: 0%;
+            top: 0%;
+        }
+        .idback{
+            display: none;
+        }
+        .mediaidback{
+            display: block;
+        }
+        .idtitle{
+            width: 100%;
+        }
+        .idpersonal{
+            width: 100%;
+        }
+
+}
+    @media (max-width: 600px){
+        .main{
+            background-size: cover;
+            min-width: 320px;
+        }
+        .idbanner i{
+           width: 100%;
+        }
+        .idbanner{
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        .bannercontent{
+            margin-top: -160px;
+        }
+
+    }
+</style>
+<body>
+    <div class="canvas"></div>
+    <section id="up"></section>
+    <section id="down"></section>
+    <section id="left"></section>
+    <section id="right"></section>
+    <div id="app" class="playfair-display">
+    <div class="main">
+    <div class="loginmain">
+        <div class="title"><h2 class="maintitle">Login</h2></div>
+        <div class="data">
+            <div class="username">
+                <input type="text" placeholder="username" class="usernametext" v-bind:value="user.results[0].login.username">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="password">
+                <input class="passwordtext" type="text" placeholder="password" v-bind:value="user.results[0].login.password">
+                <i class="fa-solid fa-unlock" @click="unlock()"></i>
+                <i class="fa-solid fa-lock" @click="lock()"></i>
+            </div>
+        </div>
+        <div class="action">
+            <button class="loginbtn" @click="login(user.results[0].login.username,user.results[0].login.password)">Login</button>
+            <button class="singup" @click="signn()">Sign up</button>
+            <button class="cencal" @click="cencal()">Cencal</button>
+        </div>
+    </div>
+    <!--id card-->
+    <div class="idcard">
+      
+        <div class="idbanner">
+         <img src="logo_transparent.png" alt="">
+            <div class="bannercontent">
+                <h2>Fauget Charity</h2>
+                <h3>www.reallygreatsite.com</h3>
+            </div>
+        </div>
+        <div class="idpicturearea">
+            <div class="idphoto" v-bind:style="{ backgroundImage: 'url(' + user.results[0].picture.large + ')' }"></div>
+        </div>
+        <div class="idcontent">
+            <h2 class="idtitle">Event ID Card</h2>
+            <div class="idpersonal">
+                <ul>
+                    <li>Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        {{user.results[0].name.title}}.
+                        {{user.results[0].name.first}}
+                        {{user.results[0].name.last}}
+                                                    </li>
+                    <li> Gender:&nbsp&nbsp&nbsp&nbsp&nbsp
+                        {{user.results[0].gender}}
+                                                    </li>
+                    <li>Birth:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        {{formatDate(user.results[0].dob.date)}}
+                                                                </li>
+                    <li>Address:&nbsp&nbsp&nbsp&nbsp
+                        {{user.results[0].location.city}},{{user.results[0].location.state}},
+                            {{user.results[0].location.country}}
+                                                                </li>
+                    <li>mail:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        {{user.results[0].email}}
+                                                </li>
+
+                </ul>
+            </div>
+        </div>
+        <button class="idback playfair-display" @click="idback()">Back</button>
+        <button class="mediaidback playfair-display" @click="idback()">Back</button>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script>   
+document.addEventListener("DOMContentLoaded", function() {
+    new Vue({
+      el: '#app',
+      data: {
+        user:{},
+      },
+      created() {
+        let apiURL = "https://randomuser.me/api/";
+        axios.get(apiURL).then(res => {
+          this.user = res.data;
+          
+        });
+      },
+      methods:{
+        login(username,password){
+            if($('.usernametext').val()==username && $('.passwordtext').val()==password){
+            $('.main').css('backgroundImage','url()').css('borderRadius','0px').css('boxShadow', '-8px 8px 16px black')
+            $('.main').addClass('rotate-180');
+            $('.loginmain').css('display','none')
+            $('.idcard').css('display','block')}
+        },
+        idback(){
+            $('.main').css('backgroundImage','url(Default_Digital_landscape_painting_featuring_a_majestic_snowca_3.jpg)').css('borderRadius','20px').css('boxShadow', '8px 8px 16px black')
+            $('.main').removeClass('rotate-180');
+            $('.loginmain').css('display','block')
+            $('.idcard').css('display','none')
+        },
+        signn(){
+            $('.main').css('backgroundPosition','100% 20%');
+            $('.loginbtn').css('display','none');
+            $('.maintitle').text('Sign');
+        },
+        cencal(){
+            $('.main').css('backgroundPosition','0% 20%');
+            $('.loginbtn').css('display','block');
+            $('.maintitle').text('Login');
+        },
+        unlock(){
+        $('.fa-unlock').css('display','none');
+        $('.fa-lock').css('display','block');
+        $('.passwordtext').attr('type','password');
+        },
+        lock(){
+            $('.fa-lock').css('display','none');
+        $('.fa-unlock').css('display','block');
+        $('.passwordtext').attr('type','text');
+
+        },
+        formatDate(date) {
+      return date.split('T')[0];
+    }
+        
+      }
+             });
+
+             });
+
+</script>
