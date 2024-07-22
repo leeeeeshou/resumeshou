@@ -162,16 +162,16 @@ $('.officepic').mouseenter(function(){
 })
 $('.toeicpic').mouseenter(function(){
     skillshow('I scored 820 on the TOEIC exam, demonstrating a solid proficiency in English. This score reflects my ability to engage in basic conversations with foreigners and comprehend written and spoken English effectively.')
-    $('.toeicpic').css('backgroundImage','url(box2.jpg)')
+    $('.toeicpic').css('backgroundImage','url("https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fbox2.jpg?alt=media&token=7da3f93b-911f-4293-8227-59b1617955d0")')
 })
 $('.toeicpic').mouseleave(function(){
-    $('.toeicpic').css('backgroundImage','url(box1.jpg)')
+    $('.toeicpic').css('backgroundImage','url("https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fbox1.jpg?alt=media&token=7d454d94-06d3-43e9-b36f-c9887ec04a15")')
 })
 $('.htmlpic').mouseenter(function(){
-    $('.htmlpic').css('backgroundImage','url(code2.jpg)')
+    $('.htmlpic').css('backgroundImage','url(https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fcode2.jpg?alt=media&token=d5389d6c-5975-448b-9d96-b5fe20bace73)')
 })
 $('.htmlpic').mouseleave(function(){
-    $('.htmlpic').css('backgroundImage','url(code1.jpg)')
+    $('.htmlpic').css('backgroundImage','url(https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fcode1.jpg?alt=media&token=f3bbdbe2-69dd-4a66-b405-30f473e37428)')
 })
 
 

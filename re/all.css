@@ -55,7 +55,7 @@ body{
     height: 100%;
     position: fixed;
     top: 0;
-    background-image: url(mountain.svg);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fmountain.svg?alt=media&token=8352c7b5-41d3-40be-b227-51c580056da8');
     background-size: cover;
     z-index: 1;
     background-position: 0 100%;
@@ -164,7 +164,7 @@ body{
   .dbimg{
     width: 100%;
     height: 150px;
-    background-image: url(cats-cafe-4697753_1280.jpg);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fcats-cafe-4697753_1280.jpg?alt=media&token=35598985-38e8-4e7e-897c-d55bd260f6ac');
     background-position: 50% 50%;
     background-size: cover;
     transition: 0.5s;
@@ -178,10 +178,10 @@ body{
     background-size: cover;
   }
 .dppic1{
-    background-image: url(color-pencil-2547678_1280.jpg);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fcolor-pencil-2547678_1280.jpg?alt=media&token=34f45127-4420-427a-b609-3df23bad6ca8');
 }
 .dppic2{
-    background-image: url(nature-5111414_1280.jpg);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fnature-5111414_1280.jpg?alt=media&token=da893aa5-3ab7-4ac3-a78a-1fdf8fffa8cf');
 }
 
 /*mainrwd*/
@@ -241,13 +241,13 @@ background-size: 125%;
     width: 40%;
 }
 .aboutpic1{
-background-image: url('scu_share.jpg');
+background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fscu_share.jpg?alt=media&token=a1ef9490-b390-4e64-a626-df9bf5873e54');
 }
 .aboutpic2{
-background-image: url('1548128912-106711144.jpg');
+background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2F1548128912-106711144.jpg?alt=media&token=57c0ca55-2a47-4db1-a37d-f17eca212754');
 }
 .aboutpic3{
-background-image: url('paperwork_flickr_troismarteaux3798360022.jpg');
+background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fpaperwork_flickr_troismarteaux3798360022.jpg?alt=media&token=cfe17acf-5ecc-47f4-8def-3cf812be270d');
 }
 
 /*skill*/
@@ -281,15 +281,15 @@ background-image: url('paperwork_flickr_troismarteaux3798360022.jpg');
     background-size: 130%;
 }
 .officepic{
-    background-image: url(office.jpg);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Foffice.jpg?alt=media&token=78189b08-d1df-4d47-bfb4-15bd11618792');
 }
 .htmlpic{
-    background-image: url(code1.jpg);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fcode1.jpg?alt=media&token=f3bbdbe2-69dd-4a66-b405-30f473e37428');
     background-position: 60% 20%;
     background-size: 150%;
 }
 .toeicpic{
-    background-image: url(box1.jpg);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fbox1.jpg?alt=media&token=7d454d94-06d3-43e9-b36f-c9887ec04a15');
 }
 .skilltitle{
     width: 100%;
@@ -343,7 +343,7 @@ transform: rotate(360deg);
     transition: 0.5s;
     flex-wrap: wrap;
     background-attachment: fixed;
-    background-image: url('Beauty001.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty001.png?alt=media&token=aa8d920b-5ff3-4075-8937-75697bffe7ac');
     background-size: cover;
     background-position: 50% 50%;
    
@@ -390,16 +390,16 @@ transform: rotate(360deg);
     z-index: 2;
 }
 #img1{
-background-image: url(Beauty001.png);
+background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty001.png?alt=media&token=aa8d920b-5ff3-4075-8937-75697bffe7ac');
 }
 #img2{
-    background-image: url(Beauty002.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty002.png?alt=media&token=b05f6c01-981f-4087-acbe-c1e317d7f1ea');
 }
 #img3{
-    background-image: url(Beauty003.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty003.png?alt=media&token=5f33e075-ac87-47e1-8f60-5146a9969818');
 }
 #img4{
-    background-image: url(Beauty004.png);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty004.png?alt=media&token=57900d8c-7075-4e01-b054-c6f4b9778cec');
 }
 .item:hover{
     width: 30%;
@@ -616,7 +616,7 @@ width: 100%;
 height: 30%;
 background-size: 100%;
 background-position: 50% 50%;
-background-image: url('leaugrass.jpg');
+background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fleaugrass.jpg?alt=media&token=d5f466e3-a3b6-4fdd-a81a-8a813cecca77');
 display: none;
 transition: 0.5s;
 }
@@ -628,7 +628,7 @@ width: 100%;
 height: 50%;
 background-position: 50% 50%;
 background-size: 100%;
-background-image: url('leaunight.jpg');
+background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2Fleaunight.jpg?alt=media&token=e1950804-c3b0-4470-b337-34f2543a3d37');
 display: none;
 transition: 0.5s;
 }
