@@ -1,0 +1,773 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    width: 100%;
+    background-color: #ECEADA;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*main*/
+.main{
+    width: 100%;
+    height: 500vh;
+    background-color: #ECEADA;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.canvas1{
+    width: 50%;
+    height: 70%;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/left-tree.svg?alt=media&token=5a11a7ef-fb2a-49af-b47d-0c5d1379bc3f');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+  .canvas2{
+   width: 50%;
+    height: 70%;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/right-grass.svg?alt=media&token=93d42600-0796-4aa7-9fb3-735bc4b8c587');
+    background-size: contain;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+   position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+
+  .canvasmount{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-image: url(mountain.svg);
+    background-size: cover;
+    z-index: 1;
+    background-position: 0 100%;
+  }
+  .mainpeople{
+    position: fixed;
+    width: 70%;
+    max-width:950px;
+    left: 50%;
+    transform:translatex(-50%);
+    bottom: -25%;
+    z-index: 2;
+  }
+  .taps{
+    position: fixed;
+    left: 10%;
+    bottom: 5%;
+    width: 40%;
+    max-width: 500px;
+    transform: rotate(5deg);
+  }
+  .welcome{
+    text-align: center;
+    font-size: 8rem;
+    position: absolute;
+    left:50%;
+    transform:translatex(-50%);
+    top: 4%;
+    z-index: 5;
+    color:#E8A374;
+    text-shadow:3px 3px 3px #7A3A2B;
+  }
+  .maintitle{
+    position: fixed;
+    top: 5%;
+    left: 7.5%;
+    font-size: 1.5rem;
+  }
+  .titlecnava{
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    background-color: #ECEADA;
+    
+  }
+  @keyframes titleshow{
+    from{
+      width: 100%;
+    }
+    to{
+      width: 0%;
+    }
+  }
+  
+  .mainhr{
+    width: 0%;
+    position: fixed;
+    top: 10%;
+    border: 1px solid #000;
+    left: 50%;
+    transform:translatex(-50%);
+  }
+  @keyframes lineshow{
+    from{
+      width: 0%;
+    }
+    to{
+      width: 85%;
+    }
+  }
+  
+  .maincontent{
+    position: fixed;
+    width: 50%;
+    max-width:600px;
+    top: 30%;
+    transform:translatey(-50%);
+    left: 10%;
+  }
+  .maincontent h2{
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .maincontent h3{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .maincontent p{
+    width:85%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .detailcontent{
+    position: fixed;
+    width: 40%;
+    height: 40%;
+    bottom: 10%;
+    left: 5%;
+  }
+  .detailrow{
+    justify-content: space-between;
+  }
+  .dbimg{
+    width: 100%;
+    height: 150px;
+    background-image: url(cats-cafe-4697753_1280.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .rowdb{
+    width: 49%;
+    height: 120px;
+    margin-top: 10px;
+    transition: 0.5s;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+.dppic1{
+    background-image: url(color-pencil-2547678_1280.jpg);
+}
+.dppic2{
+    background-image: url(nature-5111414_1280.jpg);
+}
+
+/*mainrwd*/
+.main-rwd{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 30px;
+    background-color: #ECEADA;
+    display: none;
+}
+.welcome-rwd{
+    width: 100%;
+    text-align: center;
+    font-size: 8rem;
+    top: 4%;
+    color:#E8A374;
+    text-shadow:3px 3px 3px #7A3A2B;
+}
+.main-rwd img{
+    width: 80%;
+}
+.main-rwd-text{
+    width: 80%;
+    text-align: center;
+    margin-top: 9px;
+}
+
+/*about*/
+.about{
+    height: fit-content;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.about h2{
+    font-size: 2rem;
+
+}
+.aboutpic{
+    height: 250px;
+    border: 1px solid #fff;
+    margin: 30px;
+    width: 40%;
+    max-width: 500px;
+    background-size: 110%;
+    background-position: 50% 50%;
+    transition: 0.5s;
+    opacity: 1;
+    animation:show;
+    animation-timeline:view();
+    margin-left: 0px;
+}
+
+.aboutpic:hover{
+background-size: 125%;
+}
+.aboutcontent{
+    width: 40%;
+}
+.aboutpic1{
+background-image: url('scu_share.jpg');
+}
+.aboutpic2{
+background-image: url('1548128912-106711144.jpg');
+}
+.aboutpic3{
+background-image: url('paperwork_flickr_troismarteaux3798360022.jpg');
+}
+
+/*skill*/
+.skillarea{
+    height: 80vh;
+    background-color: rgb(225,215,202);
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.skillborder{
+    width: 25%;
+    max-width: 350px;
+    height: 450px;
+    border: 3px solid #000;
+    margin: 3%;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+
+}
+.skillpic{
+    width: 90%;
+    height: 90%;
+    border-radius: 50% 50% 0 0;
+    background-color: #fff;
+    background-size: 110%;
+    background-position: 50% 50%;
+    transition: 0.5s;
+}
+.skillpic:hover{
+    background-size: 130%;
+}
+.officepic{
+    background-image: url(office.jpg);
+}
+.htmlpic{
+    background-image: url(code1.jpg);
+    background-position: 60% 20%;
+    background-size: 150%;
+}
+.toeicpic{
+    background-image: url(box1.jpg);
+}
+.skilltitle{
+    width: 100%;
+    position: absolute;
+    bottom: -12%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.fa-sun{
+    position: absolute;
+    top: -12%;
+    transition: 1s;
+}
+.skillborder:hover .fa-sun{
+transform: rotate(360deg);
+}
+.skillcontent{
+    width: 60%;
+    padding: 15px;
+    border: 3px solid #000;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+.skillrow-rwd{
+    justify-content: space-around;
+    display: none;
+    margin-top: 50px;
+}
+.skillcontent-rwd{
+    border: 1px solid #000;
+    width: 40%;
+    height: fit-content;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+.product{
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+    position: relative;
+    transition: 0.5s;
+    flex-wrap: wrap;
+    background-attachment: fixed;
+    background-image: url('Beauty001.png');
+    background-size: cover;
+    background-position: 50% 50%;
+   
+    
+}
+
+
+
+
+
+@keyframes show{
+    from{
+      opacity: 0;
+      margin-left: 300px;
+    }
+    to{
+    opacity: 1;
+    margin-left: 0px;
+  }
+  }
+.flexwrap{
+    flex-wrap: wrap;
+}
+.antiflex{
+    flex-direction: row-reverse;
+}
+
+.productshadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.6;
+}
+.item{
+    width: 5%;
+    height: 40vh;
+    border-radius: 85px;
+    margin: 2%;
+    transition: 0.5s;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 2;
+}
+#img1{
+background-image: url(Beauty001.png);
+}
+#img2{
+    background-image: url(Beauty002.png);
+}
+#img3{
+    background-image: url(Beauty003.png);
+}
+#img4{
+    background-image: url(Beauty004.png);
+}
+.item:hover{
+    width: 30%;
+    border-radius: 5px;
+    }
+
+.contact{
+    height: 50vh;
+    padding-bottom: 30px;
+}
+.formtitle{
+    font-size: 3rem;
+    z-index: 2;
+    user-select: none;
+}
+.contactcube{
+    width: 45%;
+    height: 90%;
+    margin: 2%;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px black;
+}
+.wave{
+    z-index: 1;
+    background-color: #ff191b;
+    width: 200vw;
+    height: 200vw;
+    opacity: 0.4;
+    position: absolute;
+    top: -85vw;
+    left: 50%;
+    margin-left:-100vw;
+    margin-top: -100vw;
+    border-radius: 43%;
+  animation: rotate 9000ms infinite linear;}
+  .wave:nth-child(1){
+      animation: rotate 12000ms infinite linear;
+    }
+  .wave:nth-child(2){
+      animation: rotate 15000ms infinite linear;
+      opacity: 0.1;
+      background-color: #777;
+    }
+
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+input{
+    z-index: 2;
+    width: 60%;
+    margin: 10px;
+    height: 25px;
+    border-radius: 5px;
+}
+textarea{
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    z-index: 2;
+}
+.submitbtn{
+    width: 40%;
+    margin-top: 15px;
+    height: 30px;
+    border-radius: 5px;
+    z-index: 2;
+}
+.experiencearea{
+    width: 100%;
+    height: 90vh;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    align-items: start;
+}
+.expmain{
+    width: 90%;
+    margin-top: 60px;
+}
+.expline{
+    width: 80%;
+    border: 0.1px solid gray;
+    transition: 0.5s;
+}
+.position{
+    width: 80%;
+    margin: 10px;
+    text-align: start;
+    font-size: 1.8rem;
+    
+}
+.jobcube{
+    width: 45%;
+    max-width: 650px;
+    margin: 20px;
+    height: 350px;
+    position: relative;
+    transition: 0.5s;
+    margin-top: 45px;
+}
+.jobpic{
+background-size: 120%;
+background-position: 50% 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.companyname{
+    font-size: 3.5rem;
+    user-select: none;
+    transition: 0.5s;
+    opacity: 0;
+    position: absolute;
+    top: -190px;
+    left: 150px;
+    width: 450px;
+}
+.companyname-rwd{
+    font-size: 3.5rem;
+    user-select: none;
+    transition: 0.5s;
+    display: none;
+   opacity: 0;
+   text-align: center;
+}
+.jobpic:hover{
+    background-size: 150%;
+}
+.jobphoto1{
+background-image: url('https://leeshou.my.canva.site/images/3470714eb7515b9813b8012490cef478.jpg');
+}
+.jabyear{
+    width: 35%;
+    height: 35px;
+    border: 2px solid #735E59;
+    position: absolute;
+    bottom: 10%;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    user-select: none;
+    color: #735E59;
+    font-weight: 650;
+}
+.jobtitle{
+    border: 2px solid #735E59;
+   
+}
+.jobtitle h2{
+    margin-bottom: 45px;
+    font-size: 4rem;
+    color: #735E59;
+    user-select: none;
+}
+.jobcontent{
+    width: 80%;
+    max-width: 900px;
+    border: 1px solid rgba(0,0,0,0.1);
+    position: absolute;
+    bottom: 15px;
+    font-size: 1.3rem;
+    padding: 30px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px gray;
+    transition: 0.5s;
+}
+.jobcontent-RWD{
+    width: 80%;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-size: 1.3rem;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    display: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+.expbtn{
+    padding: 8px 6px;
+    background-color: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px black;
+    position: absolute;
+    font-size: 1rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.expbtn:hover{
+    transform: translate(3px,3px);
+    box-shadow: 0px 0px 0px black;
+}
+.expnext{
+    right: 12%;
+    top: 15px;
+}
+.exppre{
+    left: 12%;
+    top: 15px;
+}
+.job-pic-scence2-top{
+width: 100%;
+height: 30%;
+background-size: 100%;
+background-position: 50% 50%;
+background-image: url('leaugrass.jpg');
+display: none;
+transition: 0.5s;
+}
+.job-pic-scence2-top:hover{
+background-size: 120%;
+}
+.job-pic-scence2-bottom{
+width: 100%;
+height: 50%;
+background-position: 50% 50%;
+background-size: 100%;
+background-image: url('leaunight.jpg');
+display: none;
+transition: 0.5s;
+}
+.job-pic-scence2-bottom:hover{
+    background-size: 120%;
+    }
+
+
+
+/*contact2*/
+
+.webcard{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    width: 100%;
+    text-align: center;
+    user-select:none;
+  }
+  .webcard ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    flex-wrap:wrap;
+  }
+  .webcard li{
+    list-style:none;
+    width: 30%;
+    max-width:200px;
+  }
+  i{
+    font-size: 3rem;
+    color:black;
+    transition:0.5s;
+    pointer-events:nones;
+  }
+  label{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 150px;
+    box-shadow:0px 35px 35px rgba(0,0,0,0.1);
+    margin: 10px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition:0s;
+    text-decoration:none;
+  }
+  label:hover{
+    background:var(--clr);
+    box-shadow:0px 35px 35px rgba(0,0,0,0.5);
+    border:5px solid var(--clr);
+  }
+  label:hover i{
+    color:white;
+    transform:scale(1.5) translatez(50px)
+  }
+  .contactdetail{
+    font-size: 2rem;
+    color: whitesmoke;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+  }
+
+
+@media(max-width: 992px){
+    .main{
+        display: none;
+    }
+    .main-rwd{
+        display: flex;
+    }
+    .aboutpic{
+        width: 95%;
+    }
+    .contactcube{
+        width: 70%;
+    }
+    .item{
+        width: 45%;
+        height: 130px;
+      }
+      .experiencearea{
+        height: max-content;
+        padding-bottom: 30px;
+      }
+      .jobcube{
+        width: 100%;
+        margin: 15px;
+      }
+      .jobcontent{
+        display: none;
+      }
+      .jobcontent-RWD{
+        display: block;
+      }
+      .companyname{
+        display: none;
+      }
+      .companyname-rwd{
+        display: block;
+
+      }
+      .aboutrow{
+        flex-wrap: wrap;
+      }
+      .wave{
+        top: -70vw;
+      }
+      .skillarea{
+        height: fit-content;
+        padding-bottom: 60px;
+      }
+      .skillmain{
+        display: none;
+      }
+      .fa-sun{
+        top: -18%;
+      }
+      .skillborder{
+        height: 300px;
+        margin-top: 30px;
+        min-width: 150px;
+      }
+      .skillcontent{
+        display: none;
+      }
+      .skilltitle{
+        bottom: -20%;
+      }
+      .skillrow-rwd{
+        display: flex;
+      }
+}
