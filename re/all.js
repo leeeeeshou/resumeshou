@@ -3,16 +3,16 @@ document.addEventListener("DOMContentLoaded", function() {
     $('.product').css('backgroundImage','url('+ img+')')
    }
 $('#img1').click(function(){
-    changbg('Beauty001.png')
+    changbg('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty001.png?alt=media&token=aa8d920b-5ff3-4075-8937-75697bffe7ac')
 });
 $('#img2').click(function(){
-    changbg('Beauty002.png')
+    changbg('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty002.png?alt=media&token=b05f6c01-981f-4087-acbe-c1e317d7f1ea')
 });
 $('#img3').click(function(){
-    changbg('Beauty003.png')
+    changbg('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty003.png?alt=media&token=5f33e075-ac87-47e1-8f60-5146a9969818')
 });
 $('#img4').click(function(){
-    changbg('Beauty004.png')
+    changbg('https://firebasestorage.googleapis.com/v0/b/projectshop-6d293.appspot.com/o/re%2FBeauty004.png?alt=media&token=57900d8c-7075-4e01-b054-c6f4b9778cec')
 });
 
 $('.expnext').click(function(){
